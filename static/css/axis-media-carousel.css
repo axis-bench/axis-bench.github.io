@@ -1,0 +1,72 @@
+/* Scoped media additions. RDD's original Bulma and project styles stay intact. */
+.axis-header .hero-body { padding-top: 3.5rem; padding-bottom: 1.5rem; }
+.axis-header .publication-title { margin-bottom: .8rem !important; }
+.axis-header .publication-authors { max-width: 1020px; margin: 0 auto .45rem; font-size: 1rem !important; line-height: 1.6; }
+.publication-authors .author-name { color: var(--primary-color); font-weight: 600; }
+.publication-authors .author-line { display: contents; }
+.publication-authors .author-block { display: inline-block; white-space: nowrap; }
+.publication-affiliations .affiliation-line { display: block; }
+.publication-authors sup, .publication-affiliations sup { margin-left: .1em; margin-right: .15em; }
+.publication-affiliations { margin: .4rem auto .2rem; color: var(--text-secondary); font-size: .875rem; line-height: 1.55; }
+.affiliation-block { display: inline-block; margin: 0 .4rem; }
+.publication-correspondence { color: var(--text-secondary); font-size: .75rem; margin: .2rem 0 .1rem; }
+.axis-resource-links { padding: .55rem .75rem .4rem; }
+.axis-teaser { margin: 1.2rem auto 0; max-width: 100%; }
+.axis-teaser a { display: block; }
+.axis-teaser img { display: block; width: 100%; height: auto; }
+.publication-links [aria-disabled="true"] { cursor: default; }
+@media (max-width: 1100px) {
+  .publication-authors .author-line, .publication-affiliations .affiliation-line { display: contents; }
+}
+@media (max-width: 768px) {
+  .axis-header .hero-body { padding: 1rem 1rem 1.25rem; }
+  .axis-header .publication-authors { font-size: .875rem !important; line-height: 1.55; }
+  .publication-affiliations { font-size: .8rem; line-height: 1.55; }
+  .affiliation-block { margin: 0 .3rem; }
+  .axis-teaser { margin-top: 1rem; }
+}
+.project-film { display: block; width: 100%; height: auto; margin: 0 auto 2rem; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,.1); }
+.finding-viewport { overflow: hidden; touch-action: pan-y; }
+.finding-track { display: flex; transition: transform .65s cubic-bezier(.22,.61,.36,1); }
+.finding-track.no-transition { transition: none; }
+.finding-track:not(.is-ready) .finding-slide:not(:first-child) { display: none; }
+.finding-slide { flex: 0 0 100%; min-width: 0; display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,2.1fr); align-items: center; gap: 2rem; padding: 1.5rem 0 2rem; text-align: left; }
+.finding-copy { padding-right: .5rem; }
+.finding-number { color: var(--primary-color); font-size: .9rem; font-weight: 600; margin-bottom: 1rem; }
+.finding-copy .title { font-size: clamp(1.3rem,2.1vw,1.8rem); line-height: 1.25; margin-bottom: 1.25rem; }
+.finding-copy .content { font-size: 1rem; }
+.finding-demo { min-width: 0; }
+.finding-video { display: block; width: 100%; height: auto; aspect-ratio: 1440 / 708; background: white; border-radius: 0; }
+.finding-demo-footer { display: flex; justify-content: flex-end; font-size: .85rem; margin-top: .5rem; }
+.demo-fullscreen { border: 0; background: transparent; font: inherit; color: var(--primary-color); padding: .5rem; cursor: pointer; display: inline-flex; gap: .45rem; align-items: center; }
+.finding-progress { height: 2px; background: var(--border-color); overflow: hidden; }
+.finding-progress span { display: block; width: 100%; height: 100%; background: var(--primary-color); transform: scaleX(0); transform-origin: left; }
+.finding-controls { display: flex; align-items: center; justify-content: center; gap: .75rem; margin-top: 1.5rem; }
+.finding-pagination { display: flex; gap: .4rem; }
+.finding-dot { font: inherit; font-size: .85rem; font-weight: 600; width: 2.2rem; height: 2.2rem; border: 1px solid var(--border-color); color: var(--text-secondary); background: white; border-radius: 50%; cursor: pointer; }
+.finding-dot[aria-current="true"] { color: white; background: var(--primary-color); border-color: var(--primary-color); }
+.finding-dot:hover { border-color: var(--primary-color); }
+#finding-toggle { min-width: 5rem; }
+.findings-carousel button:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 3px; }
+.finding-video:fullscreen { object-fit: contain; background: white; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+@media (max-width: 900px) {
+  .finding-slide { gap: 1.25rem; grid-template-columns: minmax(0,1fr) minmax(0,1.9fr); }
+  .finding-copy .content { font-size: .9rem; }
+}
+@media (max-width: 768px) {
+  #main-content { padding-top: 3.5rem; }
+  .finding-slide { grid-template-columns: 1fr; gap: 1.2rem; align-content: start; }
+  .finding-copy { padding-right: 0; min-height: 180px; }
+  .finding-copy .title { font-size: 1.45rem; }
+  .finding-number { margin-bottom: .5rem; }
+  .finding-copy .content { font-size: 1rem; }
+}
+@media (max-width: 600px) {
+  .finding-video { aspect-ratio: 960 / 1116; }
+  .finding-controls { gap: .4rem; flex-wrap: wrap; }
+  .finding-dot { width: 2rem; height: 2rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .finding-track { transition: none; }
+}

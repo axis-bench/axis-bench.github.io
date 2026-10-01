@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AXIS-Bench: What Matters in Quality-Aware VLA Pretraining</title><meta name="description" content="AXIS-Bench: a benchmark and empirical study of quality-aware VLA pretraining."><link rel="stylesheet" href="static/css/bulma.min.css"><link rel="stylesheet" href="static/css/index.css"><link rel="stylesheet" href="static/css/fonts.css"><link rel="stylesheet" href="static/css/axis-media-carousel.css"><script defer src="static/js/fontawesome.all.min.js"></script></head><body>
+<button class="scroll-to-top" title="Scroll to top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;"><a href="https://tasl-lab.github.io/publications/" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-primary" style="font-weight: 500;"><span class="icon"><i class="fas fa-flask"></i></span><span>More Works</span></a></div>
+<main id="main-content">  <section class="hero axis-header">
+    <div class="hero-body">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-12 has-text-centered">
+            <h1 class="title is-2 publication-title">What Matters in Quality-Aware VLA Pretraining<br><span class="is-size-4" style="font-style: italic; font-weight: 400; color: #666; font-family: 'Inter', sans-serif;">A Benchmark and Empirical Study</span></h1>
+<div class="publication-authors">
+  <span class="author-line">
+    <span class="author-block"><a href="https://waterhyacinthinnanhu.github.io/" target="_blank" rel="noopener">Mingxuan Yan</a><sup>1</sup>,</span>
+    <span class="author-block"><span class="author-name">Litian Gong</span><sup>3</sup>,</span>
+    <span class="author-block"><span class="author-name">Dihong Huang</span><sup>2,4</sup>,</span>
+    <span class="author-block"><span class="author-name">Zhixu Li</span><sup>3</sup>,</span>
+    <span class="author-block"><span class="author-name">Tianyu Zhang</span><sup>3</sup>,</span>
+    <span class="author-block"><span class="author-name">Wenqian Zhang</span><sup>3</sup>,</span>
+  </span>
+  <span class="author-line">
+    <span class="author-block"><span class="author-name">Hefeifei Jiang</span><sup>3</sup>,</span>
+    <span class="author-block"><span class="author-name">Peihao Li</span><sup>5</sup>,</span>
+    <span class="author-block"><span class="author-name">Jian Zhang</span><sup>6</sup>,</span>
+    <span class="author-block"><span class="author-name">Mengfei Zhao</span><sup>2</sup>,</span>
+    <span class="author-block"><span class="author-name">Yikai Tang</span><sup>4</sup>,</span>
+    <span class="author-block"><span class="author-name">Hai Zhai</span><sup>2</sup>,</span>
+  </span>
+  <span class="author-line">
+    <span class="author-block"><span class="author-name">Zehao Wang</span><sup>1</sup>,</span>
+    <span class="author-block"><span class="author-name">Ruijian Liang</span><sup>2</sup>,</span>
+    <span class="author-block"><span class="author-name">Yanjia Huang</span><sup>6</sup>,</span>
+    <span class="author-block"><span class="author-name">Lin Shao</span><sup>7</sup>,</span>
+    <span class="author-block"><span class="author-name">Changliu Liu</span><sup>4</sup>,</span>
+  </span>
+  <span class="author-line">
+    <span class="author-block"><span class="author-name">Kaiyu Hang</span><sup>8</sup>,</span>
+    <span class="author-block"><span class="author-name">Zhiwen Fan</span><sup>6</sup>,</span>
+    <span class="author-block"><span class="author-name">Masayoshi Tomizuka</span><sup>5</sup>,</span>
+    <span class="author-block"><span class="author-name">Jianfei Yang</span><sup>9</sup>,</span>
+    <span class="author-block"><a href="https://jiachenli94.github.io/" target="_blank" rel="noopener">Jiachen Li</a><sup>1,‡</sup></span>
+  </span>
+</div>
+<div class="publication-affiliations">
+  <span class="affiliation-line">
+    <span class="affiliation-block"><sup>1</sup>Georgia Institute of Technology</span>
+    <span class="affiliation-block"><sup>2</sup>Axis Robotics</span>
+    <span class="affiliation-block"><sup>3</sup>University of California, Riverside</span>
+  </span>
+  <span class="affiliation-line">
+    <span class="affiliation-block"><sup>4</sup>Carnegie Mellon University</span>
+    <span class="affiliation-block"><sup>5</sup>University of California, Berkeley</span>
+    <span class="affiliation-block"><sup>6</sup>Texas A&amp;M University</span>
+  </span>
+  <span class="affiliation-line">
+    <span class="affiliation-block"><sup>7</sup>National University of Singapore</span>
+    <span class="affiliation-block"><sup>8</sup>Rice University</span>
+    <span class="affiliation-block"><sup>9</sup>Nanyang Technological University</span>
+  </span>
+</div>
+<p class="publication-correspondence"><sup>‡</sup>Corresponding author</p>
+<div class="column has-text-centered axis-resource-links">
+                    <div class="publication-links"><span class="link-block"><a href="https://axis-bench.github.io/" title="Paper" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span></a></span><span class="link-block"><a role="link" aria-disabled="true" tabindex="-1" title="Code: coming soon" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fab fa-github"></i></span><span>Code (Coming Soon)</span></a></span><span class="link-block"><a role="link" aria-disabled="true" tabindex="-1" title="Dataset: coming soon" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-database"></i></span><span>Dataset (Coming Soon)</span></a></span>
+            </div>
+          </div>
+          <figure class="axis-teaser" id="teaser">
+            <a href="assets/fig1-teaser.png" target="_blank" rel="noopener" aria-label="Enlarge AXIS-Bench Figure 1">
+              <img src="assets/fig1-teaser.png" width="2600" height="1371" fetchpriority="high" alt="AXIS-Bench Figure 1: diverse simulation demonstrations, state-based quality labels, and three findings about quality-aware VLA pretraining.">
+            </a>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser" id="film"><div class="container is-max-widescreen"><div class="hero-body">
+  <h2 class="title is-3 has-text-centered" style="margin-bottom: 30px;">What Matters in Quality-Aware VLA Pretraining?</h2>
+  <div class="content has-text-centered"><p>Explore how <strong>demonstration quality</strong> shapes VLA pretraining, from simulation to real-world tasks.</p></div>
+  <div style="max-width: 100%; margin-bottom: 30px;"><video id="overview-film" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); display: block; margin: 0 auto;" controls playsinline preload="metadata" poster="assets/video/overview-poster-5s.jpg"><source src="assets/video/axis-bench-overview-v17-clean.mp4" type="video/mp4">Your browser does not support the video tag.</video></div>
+</div></div></section><section class="section hero is-light" id="overview">
+  <div class="container is-max-widescreen"><div class="columns is-centered has-text-centered"><div class="column is-12">
+    <h2 class="title is-3">AXIS-Bench Overview</h2>
+    <div class="content has-text-centered"><p><strong>Replayable demonstrations</strong> and <strong>state-based quality labels</strong> connect controlled pretraining studies with real-world validation.</p></div>
+    <div class="content has-text-justified">
+      <a href="assets/fig2_overview.png" target="_blank" rel="noopener"><img src="assets/fig2_overview.png" alt="AXIS-Bench system overview: replayable demonstrations, quality labels, controlled simulation comparisons, and a recipe for validation in user-defined real-world workspaces" loading="lazy" style="width: 100%; max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); display: block; margin: 0 auto 20px auto;"></a>
+    </div>
+  </div></div></div>
+</section><section class="section" id="alignment">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered"><div class="column is-12">
+      <h2 class="title is-3">Real-World Validation in Your Workspace</h2>
+      <div class="content has-text-centered"><p>A <strong>reference baseline</strong> and <strong>sim-to-real pretraining recipe</strong> for experiments in your own DROID-compatible workspace.</p></div>
+      <video id="alignment-film" class="project-film" controls playsinline preload="metadata" poster="assets/video/workspace-results-first-v5-poster.jpg" aria-label="Real-world pretraining results, workspace alignment recipe, and six baseline task comparisons">
+        <source src="assets/video/workspace-results-first-v5.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div></div>
+  </div>
+</section><section class="section" id="findings">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3 has-text-centered">Findings</h2>
+    <div class="content has-text-centered"><p>See how <strong>quality definition</strong>, <strong>label granularity</strong>, and <strong>fine-tuning choices</strong> affect policy performance.</p></div>
+    <div class="findings-carousel" role="region" aria-roledescription="carousel" aria-label="Research findings and policy demonstrations">
+      <div class="finding-viewport"><div class="finding-track"><article class="finding-slide" id="finding-page-1" role="group" aria-roledescription="slide" aria-label="1 of 4: Episode conditioning improves mean success">
+      <div class="finding-copy">
+        <p class="finding-number">Finding 01</p>
+        <h3 class="title is-4">Episode conditioning improves mean success</h3>
+        <div class="content"><p>Approach-aware episode conditioning improves mean success over plain BC across all three tested VLAs.</p></div>
+      </div>
+      <div class="finding-demo">
+        <video class="finding-video" controls muted playsinline preload="none" poster="assets/video/finding-grid-5.jpg" aria-label="Plain behavioral cloning versus episode conditioning: pi zero point five, SmolVLA and X-VLA" data-desktop="assets/video/finding-grid-5.mp4" data-mobile="assets/video/finding-mobile-5.mp4" data-poster="assets/video/finding-grid-5.jpg" data-mobile-poster="assets/video/finding-mobile-5.jpg">
+          <source src="assets/video/finding-grid-5.mp4" type="video/mp4">
+        </video>
+        <div class="finding-demo-footer"><button class="demo-fullscreen" type="button" title="Fullscreen" aria-label="View finding 01 demos fullscreen"><i class="fas fa-expand" aria-hidden="true"></i></button></div>
+      </div>
+    </article><article class="finding-slide" id="finding-page-2" role="group" aria-roledescription="slide" aria-label="2 of 4: Conditioning favors episode-level quality on average">
+      <div class="finding-copy">
+        <p class="finding-number">Finding 02 / Conditioning</p>
+        <h3 class="title is-4">Conditioning favors episode-level quality on average</h3>
+        <div class="content"><p>The preferred granularity depends on both the learning method and the VLA.</p></div>
+      </div>
+      <div class="finding-demo">
+        <video class="finding-video" controls muted playsinline preload="none" poster="assets/video/finding-grid-6.jpg" aria-label="Chunk conditioning versus episode conditioning: pi zero point five, SmolVLA and X-VLA" data-desktop="assets/video/finding-grid-6.mp4" data-mobile="assets/video/finding-mobile-6.mp4" data-poster="assets/video/finding-grid-6.jpg" data-mobile-poster="assets/video/finding-mobile-6.jpg">
+          <source src="assets/video/finding-grid-6.mp4" type="video/mp4">
+        </video>
+        <div class="finding-demo-footer"><button class="demo-fullscreen" type="button" title="Fullscreen" aria-label="View finding 02 / Conditioning demos fullscreen"><i class="fas fa-expand" aria-hidden="true"></i></button></div>
+      </div>
+    </article><article class="finding-slide" id="finding-page-3" role="group" aria-roledescription="slide" aria-label="3 of 4: Filtering favors chunk-level quality on average">
+      <div class="finding-copy">
+        <p class="finding-number">Finding 02 / Filtering</p>
+        <h3 class="title is-4">Filtering favors chunk-level quality on average</h3>
+        <div class="content"><p>The preferred granularity depends on both the learning method and the VLA.</p></div>
+      </div>
+      <div class="finding-demo">
+        <video class="finding-video" controls muted playsinline preload="none" poster="assets/video/finding-grid-7.jpg" aria-label="Episode filtering versus chunk filtering: pi zero point five, SmolVLA and X-VLA" data-desktop="assets/video/finding-grid-7.mp4" data-mobile="assets/video/finding-mobile-7.mp4" data-poster="assets/video/finding-grid-7.jpg" data-mobile-poster="assets/video/finding-mobile-7.jpg">
+          <source src="assets/video/finding-grid-7.mp4" type="video/mp4">
+        </video>
+        <div class="finding-demo-footer"><button class="demo-fullscreen" type="button" title="Fullscreen" aria-label="View finding 02 / Filtering demos fullscreen"><i class="fas fa-expand" aria-hidden="true"></i></button></div>
+      </div>
+    </article><article class="finding-slide" id="finding-page-4" role="group" aria-roledescription="slide" aria-label="4 of 4: Keeping quality tags helps fine-tuning">
+      <div class="finding-copy">
+        <p class="finding-number">Finding 03</p>
+        <h3 class="title is-4">Keeping quality tags helps fine-tuning</h3>
+        <div class="content"><p>After conditioned pretraining, constant-tag fine-tuning improves mean success.</p></div>
+      </div>
+      <div class="finding-demo">
+        <video class="finding-video" controls muted playsinline preload="none" poster="assets/video/finding-grid-8.jpg" aria-label="Plain fine-tuning versus tagged fine-tuning after episode-conditioned pretraining: pi zero point five, SmolVLA and X-VLA" data-desktop="assets/video/finding-grid-8.mp4" data-mobile="assets/video/finding-mobile-8.mp4" data-poster="assets/video/finding-grid-8.jpg" data-mobile-poster="assets/video/finding-mobile-8.jpg">
+          <source src="assets/video/finding-grid-8.mp4" type="video/mp4">
+        </video>
+        <div class="finding-demo-footer"><button class="demo-fullscreen" type="button" title="Fullscreen" aria-label="View finding 03 demos fullscreen"><i class="fas fa-expand" aria-hidden="true"></i></button></div>
+      </div>
+    </article></div></div>
+      <div class="finding-progress" aria-hidden="true"><span></span></div>
+      <div class="finding-controls">
+        <button id="finding-prev" type="button" class="button is-small is-rounded" aria-label="Previous finding"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+        <div class="finding-pagination" aria-label="Choose a finding"><button type="button" class="finding-dot" data-page="0" aria-label="Show finding 1" aria-controls="finding-page-1">1</button><button type="button" class="finding-dot" data-page="1" aria-label="Show finding 2a" aria-controls="finding-page-2">2a</button><button type="button" class="finding-dot" data-page="2" aria-label="Show finding 2b" aria-controls="finding-page-3">2b</button><button type="button" class="finding-dot" data-page="3" aria-label="Show finding 3" aria-controls="finding-page-4">3</button></div>
+        <button id="finding-next" type="button" class="button is-small is-rounded" aria-label="Next finding"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+        <button id="finding-toggle" type="button" class="button is-small is-rounded is-dark" aria-label="Pause finding demos and automatic slides">Pause</button>
+      </div>
+      <p class="sr-only" id="finding-status" aria-live="polite"></p>
+    </div>
+  </div>
+</section></main>  <footer class="footer"><div class="container"><div class="columns is-centered"><div class="column is-8"><div class="content"><p>Website adapted from <a href="https://rdd-neurips.github.io/" target="_blank" rel="noopener">RDD</a> and the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a> (<a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a>). Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.</p></div></div></div></div></footer><script src="static/js/findings-carousel.js"></script><script src="static/js/axis-page.js"></script></body></html>
