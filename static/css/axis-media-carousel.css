@@ -9,6 +9,9 @@
 .publication-authors sup, .publication-affiliations sup { margin-left: .1em; margin-right: .15em; }
 .publication-affiliations { margin: .4rem auto .2rem; color: var(--text-secondary); font-size: .875rem; line-height: 1.55; }
 .affiliation-block { display: inline-block; margin: 0 .4rem; }
+.publication-affiliations a { color: inherit; text-decoration: none; position: relative; }
+.publication-affiliations a::after { content: ''; position: absolute; width: 0; height: 1px; bottom: -2px; left: 0; background: currentColor; transition: var(--transition); }
+.publication-affiliations a:hover::after, .publication-affiliations a:focus-visible::after { width: 100%; }
 .publication-correspondence { color: var(--text-secondary); font-size: .75rem; margin: .2rem 0 .1rem; }
 .axis-resource-links { padding: .55rem .75rem .4rem; }
 .axis-teaser { margin: 1.2rem auto 0; max-width: 100%; }
